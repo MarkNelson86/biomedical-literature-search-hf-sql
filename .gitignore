@@ -20,3 +20,6 @@ env/
 
 # Temporary/debug files
 *.log
+
+# Locally downloaded PubMed text
+data/cache/
