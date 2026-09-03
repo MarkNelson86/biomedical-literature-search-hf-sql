@@ -31,7 +31,7 @@ The lexical baseline slightly outperformed MiniLM on the four retrieval question
 
 For zero-shot classification, correct predictions had higher mean confidence (**0.614**) than errors (**0.368**), with most mistakes occurring at interpretable boundaries between overlapping biomedical topics.
 
-**Hybrid retrieval:** the two-node LangGraph workflow achieved **mean Precision@5 = 0.95** and **MRR = 1.00**, matching full-corpus MiniLM retrieval. At this 80-paper scale the hybrid does not improve accuracy; its value is architectural, demonstrating how the evaluated components can be composed into a reusable multi-stage search pipeline.
+**Hybrid retrieval (LangGraph: BM25 → MiniLM):** the two-node LangGraph workflow achieved **mean Precision@5 = 0.95** and **MRR = 1.00**, matching full-corpus MiniLM retrieval. At this 80-paper scale the hybrid does not improve accuracy; its value is architectural, demonstrating how the evaluated components can be composed into a reusable multi-stage search pipeline.
 
 ## Why this project matters
 
