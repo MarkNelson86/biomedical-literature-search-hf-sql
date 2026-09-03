@@ -23,3 +23,8 @@ env/
 
 # Locally downloaded PubMed text
 data/cache/
+
+# Generated SQLite databases
+*.db
+*.sqlite
+*.sqlite3
