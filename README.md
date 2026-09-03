@@ -15,7 +15,7 @@ The real-data benchmark contains **80 manually reviewed PubMed papers** across f
 - `neurodevelopment`
 - `pediatric_complex_care`
 
-The main result is deliberately non-hyped: on this small, terminology-rich benchmark, the conventional lexical baseline slightly outperformed MiniLM semantic retrieval. That result is useful because it demonstrates model selection based on evidence rather than novelty.
+Main result: on this small, terminology-rich benchmark, the conventional lexical baseline slightly outperformed MiniLM semantic retrieval. That result is useful because it demonstrates model selection based on evidence rather than novelty.
 
 ## Key results
 
@@ -25,15 +25,11 @@ The main result is deliberately non-hyped: on this small, terminology-rich bench
        width="560">
 </p>
 
-| Task | Method | Result |
-| --- | --- | ---: |
-| Retrieval | SQLite FTS5/BM25 | Mean Precision@5 **1.00**, MRR **1.00** |
-| Retrieval | MiniLM semantic search | Mean Precision@5 **0.95**, MRR **1.00** |
-| Classification | DeBERTa zero-shot | Accuracy **0.875**, macro-F1 **0.875** |
+**Zero-shot classification:** DeBERTa achieved **87.5% accuracy** and **macro-F1 = 0.875** on the 80-paper PubMed corpus without task-specific fine-tuning.
 
-The sole MiniLM cross-topic top-five result was nevertheless scientifically related to the query, illustrating an important limitation of strict single-topic relevance labels.
+The lexical baseline slightly outperformed MiniLM on the four retrieval questions, although MiniLM's sole cross-topic result was still scientifically relevant to the query, illustrating an important limitation of strict single-topic relevance labels.
 
-For zero-shot classification, correct predictions had higher mean confidence (**0.614**) than errors (**0.368**), and many mistakes occurred at interpretable boundaries between overlapping biomedical topics.
+For zero-shot classification, correct predictions had higher mean confidence (**0.614**) than errors (**0.368**), with most mistakes occurring at interpretable boundaries between overlapping biomedical topics.
 
 ## Why this project matters
 
